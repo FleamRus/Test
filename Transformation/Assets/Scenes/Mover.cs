@@ -9,5 +9,9 @@ public class Mover : MonoBehaviour
         var nextPosition = transform.position;
         nextPosition.z += _speed;
         transform.position = nextPosition;
+
+        transform.Translate(_speed * Time.deltaTime * Vector3.forward);
+
+        transform.LookAt(Vector3.up);
     }
 }
